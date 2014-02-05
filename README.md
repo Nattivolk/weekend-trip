@@ -1,2 +1,3 @@
 weekend-trip
 ============
+Playing around with code....
