@@ -1,17 +1,20 @@
-$(document).ready(function() {
-    $('.activities').eq(0).click(function() {
-        $('.info_activities').eq(0).toggle()
-    });
-});
+// $(document).ready(function() {
+  
+//   $("div").click(function() {
+//    var i = $( "div" ).index(this);
+//    $('.activities').eq(i).click(function() {
+//      $('.info_activities').eq(i).toggle()
+//    });
+//   });
+  
+// });
+
 
 $(document).ready(function() {
-    $('.activities').eq(1).click(function() {
-        $('.info_activities').eq(1).toggle()
-    });
-});
-
-$(document).ready(function() {
-    $('.activities').eq(2).click(function() {
-        $('.info_activities').eq(2).toggle()
-    });
+  var activities = [0,1,2];
+  activities.forEach(function(activity){
+    $('.activities').eq(activity).click(function() {
+        $('.info_activities').eq(activity).toggle()
+    });  
+  });
 });
