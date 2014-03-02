@@ -18,3 +18,21 @@ $(document).ready(function() {
     });  
   });
 });
+
+$(document).ready(function() {
+  var restaurants = [0,1,2];
+  restaurants.forEach(function(restaurant){
+    $('.restaurants').eq(restaurant).click(function() {
+        $('.info_restaurants').eq(restaurant).toggle()
+    });  
+  });
+});
+
+$(document).ready(function() {
+  var directions = [0,1,2];
+  directions.forEach(function(direction){
+    $('.directions').eq(direction).click(function() {
+        $('.info_directions').eq(direction).toggle()
+    });  
+  });
+});
