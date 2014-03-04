@@ -9,7 +9,6 @@
   
 // });
 
-
 $(document).ready(function() {
   var activities = [0,1,2];
   activities.forEach(function(activity){
@@ -36,3 +35,14 @@ $(document).ready(function() {
     });  
   });
 });
+
+var cities = ['Prague', 'Rome', 'Amsterdam', 'Paris', 'Dublin', 'Athens', 'Brussels', 'Vienna', 'Bern', 'Kiev', 'Lissboa'];
+
+$('.city_one').html(cities[Math.floor(Math.random() * cities.length)]);
+$('.city_two').html(cities[Math.floor(Math.random() * cities.length)]);
+$('.city_three').html(cities[Math.floor(Math.random() * cities.length)]);
+
+
+
+
+
