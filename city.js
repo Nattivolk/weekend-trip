@@ -16,18 +16,14 @@ $(document).ready(function() {
         $('.info_activities').eq(activity).toggle()
     });  
   });
-});
 
-$(document).ready(function() {
   var restaurants = [0,1,2];
   restaurants.forEach(function(restaurant){
     $('.restaurants').eq(restaurant).click(function() {
         $('.info_restaurants').eq(restaurant).toggle()
     });  
   });
-});
 
-$(document).ready(function() {
   var directions = [0,1,2];
   directions.forEach(function(direction){
     $('.directions').eq(direction).click(function() {
@@ -36,13 +32,17 @@ $(document).ready(function() {
   });
 });
 
-var cities = ['Prague', 'Rome', 'Amsterdam', 'Paris', 'Dublin', 'Athens', 'Brussels', 'Vienna', 'Bern', 'Kiev', 'Lissboa'];
+// var cities = ['Prague', 'Rome', 'Amsterdam', 'Paris', 'Dublin', 'Athens'];
+// var city_pictures = ['prague.jpeg', 'rome.jpeg', 'amsterdam.jpeg', 'paris.jpeg', 'dublin.jpeg', 'athens.jpeg'];
 
-$('.city_one').html(cities[Math.floor(Math.random() * cities.length)]);
-$('.city_two').html(cities[Math.floor(Math.random() * cities.length)]);
-$('.city_three').html(cities[Math.floor(Math.random() * cities.length)]);
+// $('.city_one').html(cities[Math.floor(Math.random() * cities.length)]);
+// $('.city_two').html(cities[Math.floor(Math.random() * cities.length)]);
+// $('.city_three').html(cities[Math.floor(Math.random() * cities.length)]);
 
 
+// $('.city_one').after('<img class="city-picture" src="prague.jpeg" />');
+// $('.city_two').after('<img class="city-picture" src="/rome.jpeg" />');
+// $('.city_three').after('<img class="city-picture" src="/amsterdam.jpeg" />');
 
 
 
