@@ -49,12 +49,15 @@ var city_boxes = [$('.city_one'), $('.city_two'), $('.city_three')];
 
 var random_city = cities[Math.floor(Math.random() * cities.length)]
 $('.city_one').html(random_city.name).after(random_city.image);
+$('.city_one').next().addClass('city-picture')
 
 var random_city = cities[Math.floor(Math.random() * cities.length)]
 $('.city_two').html(random_city.name).after(random_city.image);
+$('.city_two').next().addClass('city-picture')
 
 var random_city = cities[Math.floor(Math.random() * cities.length)]
 $('.city_three').html(random_city.name).after(random_city.image);
+$('.city_three').next().addClass('city-picture')
 
 // for (var index=0;index<city_boxes.length;index++) { 
 // 	var random_city = cities[Math.floor(Math.random() * cities.length)]
