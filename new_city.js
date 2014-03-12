@@ -43,26 +43,23 @@ city6.image = athens_image;
 var cities = [city1, city2, city3, city4, city5, city6];
 var city_boxes = [$('.city_one'), $('.city_two'), $('.city_three')];
 
-// $('.city_one').html(cities[Math.floor(Math.random() * cities.length)].name).after(cities[Math.floor(Math.random() * cities.length)].image);
-// $('.city_two').html(cities[Math.floor(Math.random() * cities.length)].name).after(cities[Math.floor(Math.random() * cities.length)].image);
-// $('.city_three').html(cities[Math.floor(Math.random() * cities.length)].name).after(cities[Math.floor(Math.random() * cities.length)].image);
+// var random_city = cities[Math.floor(Math.random() * cities.length)]
+// $('.city_one').html(random_city.name).after(random_city.image);
+// $('.city_one').next().addClass('city-picture')
 
-var random_city = cities[Math.floor(Math.random() * cities.length)]
-$('.city_one').html(random_city.name).after(random_city.image);
-$('.city_one').next().addClass('city-picture')
+// var random_city = cities[Math.floor(Math.random() * cities.length)]
+// $('.city_two').html(random_city.name).after(random_city.image);
+// $('.city_two').next().addClass('city-picture')
 
-var random_city = cities[Math.floor(Math.random() * cities.length)]
-$('.city_two').html(random_city.name).after(random_city.image);
-$('.city_two').next().addClass('city-picture')
+// var random_city = cities[Math.floor(Math.random() * cities.length)]
+// $('.city_three').html(random_city.name).after(random_city.image);
+// $('.city_three').next().addClass('city-picture')
 
-var random_city = cities[Math.floor(Math.random() * cities.length)]
-$('.city_three').html(random_city.name).after(random_city.image);
-$('.city_three').next().addClass('city-picture')
-
-// for (var index=0;index<city_boxes.length;index++) { 
-// 	var random_city = cities[Math.floor(Math.random() * cities.length)]
-// 	index.html(random_city.name).after(random_city.image)
-// };
+for (var i=0; i<city_boxes.length; i++) {
+	var random_city = cities[Math.floor(Math.random() * cities.length)]
+	city_boxes[i].html(random_city.name).after(random_city.image)
+	city_boxes[i].next().addClass('city-picture')
+};
 
 
 
