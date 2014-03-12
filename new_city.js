@@ -43,9 +43,15 @@ city6.image = athens_image;
 var cities = [city1, city2, city3, city4, city5, city6];
 var city_boxes = [$('.city_one'), $('.city_two'), $('.city_three')];
 
+// var random_city1 = cities[Math.floor(Math.random() * cities.length)];
+// var random_city2 = cities[Math.floor(Math.random() * cities.length)];
+// var random_city3 = cities[Math.floor(Math.random() * cities.length)];
+// var random_city_array = [];
+
 for (var i=0; i<city_boxes.length; i++) {
 	var random_city = cities[Math.floor(Math.random() * cities.length)]
 	city_boxes[i].html(random_city.name).after(random_city.image)
 	city_boxes[i].next().addClass('city-picture')
+	cities.splice(random_city, 1)
 };
 
