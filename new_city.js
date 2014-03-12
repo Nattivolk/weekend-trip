@@ -43,28 +43,9 @@ city6.image = athens_image;
 var cities = [city1, city2, city3, city4, city5, city6];
 var city_boxes = [$('.city_one'), $('.city_two'), $('.city_three')];
 
-// var random_city = cities[Math.floor(Math.random() * cities.length)]
-// $('.city_one').html(random_city.name).after(random_city.image);
-// $('.city_one').next().addClass('city-picture')
-
-// var random_city = cities[Math.floor(Math.random() * cities.length)]
-// $('.city_two').html(random_city.name).after(random_city.image);
-// $('.city_two').next().addClass('city-picture')
-
-// var random_city = cities[Math.floor(Math.random() * cities.length)]
-// $('.city_three').html(random_city.name).after(random_city.image);
-// $('.city_three').next().addClass('city-picture')
-
 for (var i=0; i<city_boxes.length; i++) {
 	var random_city = cities[Math.floor(Math.random() * cities.length)]
 	city_boxes[i].html(random_city.name).after(random_city.image)
 	city_boxes[i].next().addClass('city-picture')
 };
-
-
-
-// $('.city_one').after('<img class="city-picture" src="prague.jpeg" />');
-// $('.city_two').after('<img class="city-picture" src="/rome.jpeg" />');
-// $('.city_three').after('<img class="city-picture" src="/amsterdam.jpeg" />');
-
 
