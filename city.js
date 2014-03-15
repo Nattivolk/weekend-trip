@@ -1,9 +1,9 @@
 $(function () {
-  
+
   var toggleDetails = function (cityBoxes, target) {
   cityBoxes.forEach(function(cityBox){
-    $('.' + target).eq(cityBox).click (function () {
-        $('.info_' + target).eq(cityBox).toggle()
+    cityBox.find('.' + target).click (function () {
+        cityBox.find('.info_' + target).toggle()
     });
   });
 };
@@ -31,7 +31,7 @@ var cities = [Prague, Rome, Amsterdam, Paris, Dublin, Athens];
 
 for (var i=0; i<cityBoxes.length; i++) {
   var random_city = cities[Math.floor(Math.random() * cities.length)];
-  cityBoxes[i].html(random_city.name).after(random_city.image);
+  cityBoxes[i].find('header').html(random_city.name).after(random_city.image);
   cities.splice(cities.indexOf(random_city), 1);
 };
 
