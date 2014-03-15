@@ -15,7 +15,7 @@ toggleDetails (cityBoxes, 'directions');
 
 var cityFactory = function (name, image_path){
   var image = new Image();
-  image.src = image_path;
+  image.src = "/resources" + image_path;
   $(image).addClass('city-picture');
   return {name: name, image:image};
 };
