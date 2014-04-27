@@ -13,27 +13,27 @@ toggleDetails (cityBoxes, 'activities');
 toggleDetails (cityBoxes, 'restaurants');
 toggleDetails (cityBoxes, 'directions');
 
-var cityFactory = function (name, image_path){
-  var image = new Image();
-  image.src = "/resources" + image_path;
-  $(image).addClass('city-picture');
-  return {name: name, image:image};
-};
+$.get('/random_cities').then(function (response) {
+  var cities = response;
 
-var Prague = cityFactory("Prague", "/prague.jpeg");
-var Rome = cityFactory("Rome", "/rome.jpeg");
-var Amsterdam = cityFactory("Amsterdam", "/amsterdam.jpeg");
-var Paris = cityFactory("Paris", "/paris.jpeg");
-var Dublin = cityFactory("Dublin", "/dublin.jpeg");
-var Athens = cityFactory("Athens", "/athens.jpeg");
+  cities = cities.map(function(city) {
+    var image = new Image;
+    image.src = city.image;
+    return {name: city.name, image: image};
+  });
 
-var cities = [Prague, Rome, Amsterdam, Paris, Dublin, Athens];
+  var cityBoxes = cities.map(function (city) {
+    var cityBox = $('<div class="city"><header class="city-name"></header></div>');
+    $(city.image).addClass('city-picture');
+    cityBox.find('.city-name').html(city.name).after(city.image);
+    return cityBox;
+  });
 
-for (var i=0; i<cityBoxes.length; i++) {
-  var random_city = cities[Math.floor(Math.random() * cities.length)];
-  cityBoxes[i].find('header').html(random_city.name).after(random_city.image);
-  cities.splice(cities.indexOf(random_city), 1);
-};
+  cityBoxes.forEach(function (cityBox) {
+    $('.cities').append(cityBox);
+  });
+});
+
 
 });
 
