@@ -8,7 +8,14 @@
 	<div class="city">
 		<header class="city-name">{{name}}</header>
 		<img src="{{image}}" class="city-picture"></img>
+		<div class="attractions">
+			<header>Attractions</header>
+			<div class="list" style="display:none"></div>
+		</div>
 	</div>
+</script>
+<script id="attraction-template" type="text/x-handlebars-template">
+	<div>{{name}}</div>
 </script>
 </head>
 <body>

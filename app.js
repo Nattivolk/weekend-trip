@@ -20,7 +20,10 @@ app.get('/random_cities', function(req,res) {
   res.json(_.first(shuffledCities, 3));
 });
 
-
+app.get('/attractions', function(req, res) {
+	req.query.city;
+	res.json(["Tower", "Park", "River", "Golden Cube"]);
+});
 
 var cityFactory = function (name, image_path){
   image_path = "/resources" + image_path;
