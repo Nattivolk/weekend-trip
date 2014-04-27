@@ -13,20 +13,16 @@ toggleDetails (cityBoxes, 'activities');
 toggleDetails (cityBoxes, 'restaurants');
 toggleDetails (cityBoxes, 'directions');
 
+var templates = {
+  city: Handlebars.compile($("#city-template").html())
+
+};
+
 $.get('/random_cities').then(function (response) {
   var cities = response;
 
-  cities = cities.map(function(city) {
-    var image = new Image;
-    image.src = city.image;
-    return {name: city.name, image: image};
-  });
-
   var cityBoxes = cities.map(function (city) {
-    var cityBox = $('<div class="city"><header class="city-name"></header></div>');
-    $(city.image).addClass('city-picture');
-    cityBox.find('.city-name').html(city.name).after(city.image);
-    return cityBox;
+    return templates.city(city);
   });
 
   cityBoxes.forEach(function (cityBox) {
@@ -36,5 +32,3 @@ $.get('/random_cities').then(function (response) {
 
 
 });
-
-
