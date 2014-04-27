@@ -37,8 +37,9 @@ $.get('/random_cities').then(function (response) {
     $('.attractions .list').append(attractions);
   });
 
-
- $('.attractions .list').first().toggle();
+$('.attractions header').on('click', function(){
+  $(this).closest('.attractions').find('.list').toggle();
+   });
   
 });
 });
