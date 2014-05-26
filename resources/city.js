@@ -27,4 +27,12 @@ $(function () {
       $(this).closest('.attractions').find('.list').toggle();
     });
   });
+
+  $.get('/european_capitals').then(function (response) {
+    response.forEach(function (capital_info) {
+      $('ul').append(
+        $('<li>').append(capital_info.CapitalName)
+      );
+    });
+  })
 });

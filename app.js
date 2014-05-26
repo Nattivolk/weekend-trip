@@ -19,6 +19,7 @@ app.set('views', templatesPath);
 
 var attractions = require('./model/attractions');
 var cities = require('./model/cities');
+var capitals = require('./resources/country-capitals');
 
 app.get('/', function(req, res){
   res.render('start');
@@ -29,6 +30,12 @@ app.get('/random_cities', function (req,res) {
   res.json(
     _(cities.all).sortBy(randomOrder).first(3).value()
   );
+});
+
+app.get('/european_capitals', function (req, res) {
+	res.json(
+		_.filter(capitals, {ContinentName: "Europe"})
+	);
 });
 
 app.get('/attractions', function(req, res) {
