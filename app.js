@@ -11,7 +11,7 @@ var resourcesUrlPrefix = '/resources';
 console.log('=> serving static files under url', resourcesUrlPrefix, 'using files inside', resourcesPath);
 app.use(resourcesUrlPrefix, express.static(resourcesPath));
 
-app.engine('html', require('ejs').renderFile);
+app.engine('html', ejs.renderFile);
 app.set('view engine', 'ejs');
 
 console.log('=> using', templatesPath, 'for ejs templates');
