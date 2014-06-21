@@ -44,5 +44,5 @@ app.get('/attractions', function(req, res) {
 });
 
 
-console.log('listening on port 3000...\nhave fun!\nHave fun too, Moza :)');
+console.log('listening on port 3000...');
 app.listen(3000);
